@@ -5,7 +5,9 @@ export default class Pokedex extends Component {
     render() {
         return (
             <div>
-                <Pokemon/>
+                {this.props.pokemonArray.map(pokemon => (
+                    <Pokemon key={pokemon.name} pokemonData={pokemon}/>
+                ))}
             </div>
         )
     }

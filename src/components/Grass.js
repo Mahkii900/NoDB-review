@@ -12,7 +12,8 @@ export default class Grass extends Component {
     render() {
         return (
             <div>
-                Grass
+                {this.props.pokeData.name}
+                <img src={this.props.pokeData.sprites.front_shiny} alt={this.props.pokeData.name}/>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Pokemon = () => {
+const Pokemon = (props) => {
     return (
         <div>
             Pokemon
