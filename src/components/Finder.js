@@ -18,9 +18,13 @@ export default class Finder extends Component {
 
     render() {
         return (
-            <div>
+            <div className='finder'>
                 {this.state.grassArr.map(pokemon => (
-                    <Grass key={pokemon.name} pokeData={pokemon}/>
+                    <Grass
+                        key={pokemon.name}
+                        pokeData={pokemon}
+                        catchFn={this.props.catchFn}
+                    />
                 ))}
             </div>
         )

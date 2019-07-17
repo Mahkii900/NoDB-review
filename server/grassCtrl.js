@@ -3,9 +3,9 @@ const axios = require('axios')
 module.exports = {
     getPokemon(req, res) {
         const pokemonArr = []
-        const rand1 = Math.ceil(Math.random() * 809)
-        const rand2 = Math.ceil(Math.random() * 809)
-        const rand3 = Math.ceil(Math.random() * 809)
+        const rand1 = Math.ceil(Math.random() * 807)
+        const rand2 = Math.ceil(Math.random() * 807)
+        const rand3 = Math.ceil(Math.random() * 807)
 
         axios.get(`https://pokeapi.co/api/v2/pokemon/${rand1}`).then(result => {
             pokemonArr.push(result.data)

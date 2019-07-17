@@ -3,7 +3,8 @@ import React from 'react'
 const Pokemon = (props) => {
     return (
         <div>
-            Pokemon
+            {props.pokemonData.name}
+            <img onClick={() => {props.release(props.pokemonData.id)}} src={props.pokemonData.img} alt={props.pokemonData.name}/>
         </div>
     )
 }
