@@ -8,7 +8,7 @@ export default class Pokedex extends Component {
                 <h2>Pokedex</h2>
                 <div className="pokemon-list">
                     {this.props.pokemonArray.map(pokemon => (
-                        <Pokemon key={pokemon.name} pokemonData={pokemon} release={this.props.releasePokemon}/>
+                        <Pokemon key={pokemon.name} pokemonData={pokemon} release={this.props.releasePokemon} saveFn={this.props.saveName}/>
                     ))}
                 </div>
             </div>

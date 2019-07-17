@@ -13,7 +13,7 @@ export default class Grass extends Component {
     catchPokemon() {
         const body = {
             name: this.props.pokeData.name,
-            img: this.props.pokeData.sprites.front_shiny
+            img: this.props.pokeData.sprites.front_default
         }
         this.props.catchFn(body)
         this.setState({caught: true})
@@ -26,7 +26,7 @@ export default class Grass extends Component {
               {this.state.caught ? null : (
                 <img
                   onClick={() => this.catchPokemon()}
-                  src={this.props.pokeData.sprites.front_shiny}
+                  src={this.props.pokeData.sprites.front_default}
                   alt={this.props.pokeData.name}
                 />
               )}

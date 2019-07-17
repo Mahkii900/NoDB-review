@@ -13,6 +13,7 @@ class App extends Component {
     }
     this.catchPokemon = this.catchPokemon.bind(this)
     this.releasePokemon = this.releasePokemon.bind(this)
+    this.saveName = this.saveName.bind(this)
   }
 
   catchPokemon(body) {
@@ -35,13 +36,20 @@ class App extends Component {
         pokemonArray: res.data
       })
     })
-}
+  }
+
+  saveName(id, body) {
+    axios.put(`/api/pokemon/${id}`, body).then(res => {
+      this.setState({pokemonArray: res.data})
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Header/>
         <Finder catchFn={this.catchPokemon}/>
-        <Pokedex pokemonArray={this.state.pokemonArray} releasePokemon={this.releasePokemon}/>
+        <Pokedex pokemonArray={this.state.pokemonArray} releasePokemon={this.releasePokemon} saveName={this.saveName}/>
       </div>
     );
   }

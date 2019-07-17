@@ -1,24 +1,5 @@
-const pokemonCaught = [
-    {
-      id: 1,
-      name: 'Dratini',
-      img:
-        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/147.png'
-    },
-    {
-      id: 2,
-      name: 'Rhydon',
-      img:
-        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/112.png'
-    },
-    {
-      id: 3,  
-      name: 'Magneton',
-      img:
-        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/82.png'
-    }
-]
-let id = 4
+const pokemonCaught = []
+let id = 1
 
 module.exports = {
     getAll: (req, res) => {
